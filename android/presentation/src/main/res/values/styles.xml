@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbIcon">@drawable/ic_switch_button</item>
+        <item name="track">@drawable/rectangle_bronze_30</item>
+        <item name="background">@null</item>
+    </style>
+
+    <style name="FullScreenDialogTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item> <!-- 플로팅 제거 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomDatePickerDialog" parent="Theme.AppCompat.Light.Dialog">
+        <!-- 다이얼로그 배경 색상 -->
+        <item name="android:background">@color/we_light_pink</item>
+        <!-- 선택된 날짜의 배경 색상 -->
+        <item name="colorAccent">@color/we_pink</item>
+        <item name="android:textColorPrimaryInverse">@color/we_brown</item>
+        <item name="android:textColorSecondaryInverse">@color/we_brown</item>
+
+        <item name="android:buttonBarPositiveButtonStyle">@style/CustomDialogButton</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/CustomDialogButton</item>
+    </style>
+
+    <style name="CustomDialogButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/we_brown</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:backgroundTint">@color/we_gray</item> <!-- 버튼 배경 색상 변경 -->
+    </style>
+
+
+</resources>

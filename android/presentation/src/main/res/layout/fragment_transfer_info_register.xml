@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".transfer.TransferInfoRegisterFragment">
+
+
+        <TextView
+            android:id="@+id/tv_input_money"
+            style="@style/suite_bold_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:text="금액"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_input_money"
+            style="@style/suite_regular_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectangle_white_10_stroke_1_we_brown"
+            android:hint="금액"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:paddingVertical="19dp"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/we_brown"
+            app:layout_constraintTop_toBottomOf="@+id/tv_input_money" />
+
+
+        <TextView
+            android:id="@+id/tv_bride"
+            style="@style/suite_semibold_16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/selector_rectangle_we_gray_10_to_rectangle_we_light_pink_10"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:text="신부"
+            android:textColor="@color/selector_white_to_we_brown"
+            app:layout_constraintEnd_toStartOf="@+id/tv_groom"
+            app:layout_constraintStart_toStartOf="@+id/et_input_money"
+            app:layout_constraintTop_toBottomOf="@+id/et_input_money" />
+
+        <TextView
+            android:id="@+id/tv_groom"
+            style="@style/suite_semibold_16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/selector_rectangle_we_gray_10_to_rectangle_we_light_pink_10"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:text="신랑"
+            android:textColor="@color/selector_white_to_we_brown"
+            app:layout_constraintEnd_toEndOf="@+id/et_input_money"
+            app:layout_constraintStart_toEndOf="@+id/tv_bride"
+            app:layout_constraintTop_toTopOf="@+id/tv_bride" />
+
+        <TextView
+            android:id="@+id/tv_input_complete"
+            style="@style/suite_medium_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/selector_rectangle_we_gray_10_to_rectangle_we_light_pink_10"
+            android:enabled="true"
+            android:gravity="center"
+            android:paddingVertical="11dp"
+            android:text="@string/remittance"
+            android:textColor="@color/selector_white_to_we_brown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

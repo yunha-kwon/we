@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="7">
+
+    <TextView
+        android:id="@+id/tv_mon"
+        style="@style/suite_semibold_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/mon"
+        android:textColor="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/tv_tue"
+        style="@style/suite_semibold_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/tue"
+        android:textColor="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/tv_wed"
+        style="@style/suite_semibold_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/wed"
+        android:textColor="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/tv_thu"
+        style="@style/suite_semibold_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/thu"
+        android:textColor="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/tv_fri"
+        style="@style/suite_semibold_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/fri"
+        android:textColor="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/tv_sat"
+        style="@style/suite_semibold_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/sat"
+        android:textColor="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/tv_sun"
+        style="@style/suite_semibold_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/sun"
+        android:textColor="@color/dark_gray" />
+</LinearLayout>

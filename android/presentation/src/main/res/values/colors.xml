@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rosy_brown">#FFC1C1</color>
+    <color name="we_pink">#FFD0DE</color>
+    <color name="we_brown">#A88E97</color>
+    <color name="white">#FFFFFF </color>
+    <color name="black">#000000</color>
+    <color name="light_gray">#F8F8F8</color>
+    <color name="rosy_red">#B45B5B</color>
+    <color name="dark_gray">#8F9BB3</color>
+    <color name="dark_brown">#866F77</color>
+    <color name="we_gray">#D9D9D9</color>
+    <color name="bronze">#86626E</color>
+    <color name="we_light_pink">#FFF2F2</color>
+    <color name="we_ivory">#FDF9F8</color>
+</resources>

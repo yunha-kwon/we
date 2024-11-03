@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_item_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:background="@drawable/rectangle_white_10_330_160"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="20dp"
+    android:elevation="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_bank_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+    />
+
+    <TextView
+        android:id="@+id/tv_home_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="신한"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="31dp"
+        android:layout_marginStart="76dp"
+        style="@style/suite_extra_bold_16"
+    />
+
+    <TextView
+        android:id="@+id/tv_home_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/tv_home_account"
+        app:layout_constraintStart_toEndOf="@+id/tv_home_account"
+
+        android:layout_marginStart="10dp"
+        style="@style/suite_extra_bold_16"
+        />
+
+    <TextView
+        android:id="@+id/tv_home_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="282,100원"
+        style="@style/suite_extra_bold_20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="93dp"
+        android:layout_marginStart="21dp"
+    />
+
+    <ImageView
+        android:id="@+id/iv_more_vert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="20dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_more_vert_24"
+    />
+
+    <ImageView
+        android:id="@+id/iv_reload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_home_money"
+        app:layout_constraintStart_toEndOf="@id/tv_home_money"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/rotate_right"
+    />
+
+
+
+    <TextView
+        android:id="@+id/tv_account_adapter_remittance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이체하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:background="@drawable/rectangle_red_10_50_20"
+    />
+
+    <ImageView
+        android:id="@+id/iv_rotate_arrow"
+        android:visibility="gone"
+        android:src="@drawable/ic_plus_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

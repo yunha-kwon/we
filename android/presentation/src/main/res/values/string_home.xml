@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_app_name">[WE:]</string>
+    <string name="couple_account">커플 통장</string>
+    <string name="meal_ticket">식권</string>
+    <string name="welcome">ooo님 환영합니다</string>
+    <string name="remain">남았습니다.</string>
+    <string name="remaining_days">결혼식까지 180일</string>
+    <string name="invitation">청첩장</string>
+    <string name="couple_register_button">연인\n등록</string>
+    <string name="couple_register">연인 등록</string>
+    <string name="invitation_share">공유하기</string>
+    <string name="guest_book">QR</string>
+</resources>

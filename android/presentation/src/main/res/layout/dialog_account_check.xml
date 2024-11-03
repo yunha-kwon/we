@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_check_account_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_account_all"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:paddingBottom="20dp"
+        style="@style/suite_semibold_20"
+    />
+
+    <View
+        android:id="@+id/v_check_account_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_check_account_all"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/rosy_red"
+    />
+
+    <TextView
+        android:id="@+id/tv_check_account_man"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/v_check_account_divider"
+        android:text="@string/dialog_account_man"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
+        style="@style/suite_semibold_20"
+    />
+
+    <View
+        android:id="@+id/v_check_account_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_check_account_man"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/rosy_red"
+        />
+
+    <TextView
+        android:id="@+id/tv_check_account_woman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/v_check_account_divider2"
+        android:text="@string/dialog_account_woman"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="40dp"
+        style="@style/suite_semibold_20"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

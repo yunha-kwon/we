@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".couple.CoupleFragment">
+
+        <include
+            android:id="@+id/ic_title"
+            layout="@layout/include_we_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@{@string/couple_register}" />
+
+        <TextView
+            style="@style/suite_semibold_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="매칭 코드"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_couple_code"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_couple_code"
+            style="@style/suite_bold_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toTopOf="@id/et_input_couple"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="1 2 3 4 5" />
+
+        <TextView
+            style="@style/suite_semibold_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="코드 입력"
+            app:layout_constraintBottom_toTopOf="@+id/et_input_couple"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/et_input_couple"
+            style="@style/suite_regular_16"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rectangle_white_10_stroke_1_we_brown"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:paddingVertical="19dp"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/we_brown"
+            app:layout_constraintEnd_toStartOf="@+id/tv_input_complete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ic_title"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_input_complete"
+            style="@style/suite_medium_20"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/rectangle_we_light_pink_10"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:text="완료"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_input_date"
+            style="@style/suite_medium_20"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rectangle_we_light_pink_10"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="결혼식 날짜 입력"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_input_couple" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

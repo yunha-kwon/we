@@ -1,0 +1,20 @@
+<resources>
+    <string name="bottom_menu_home">홈</string>
+    <string name="bottom_menu_schedule">스케줄</string>
+    <string name="bottom_menu_my_page">내정보</string>
+
+
+    <string name="msg_token_fmt"></string>
+
+
+    <string name="drop_down_menu_update">수정하기</string>
+    <string name="drop_down_menu_delete">삭제하기</string>
+
+    <string name="kakao_app_key">7b72b5d6477e74e43a5e1691bf66445a</string>
+    <string name="kakao_scheme">kakao7b72b5d6477e74e43a5e1691bf66445a</string>
+    <string name="kakao_link_host">kakaolink</string>
+
+    <string name="easy_password_check">간편 비밀번호</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_nav_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.we.presentation.sign.SignInFragment"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_fragment_sign_in_to_fragment_sign_up"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.we.presentation.sign.SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_fragment_sign_up_to_fragment_easy_password_register"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/easyPasswordRegisterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/easyPasswordRegisterFragment"
+        android:name="com.we.presentation.sign.EasyPasswordRegisterFragment"
+        tools:layout="@layout/fragment_easy_password_register">
+        <action
+            android:id="@+id/action_fragment_easy_password_register_to_fragment_sign_up_success"
+            app:popUpTo="@+id/signInFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/signUpSuccessFragment" >
+            <argument
+                android:name="easyPasswordType"
+                app:argType="boolean"
+                />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpSuccessFragment"
+        android:name="com.we.presentation.sign.SignUpSuccessFragment"
+        tools:layout="@layout/fragment_sign_up_success" >
+        <action
+            android:id="@+id/action_signUpSuccessFragment_to_transfer_nav_graph"
+            app:destination="@id/transfer_nav_graph" />
+    </fragment>
+
+    <!-- 이체 하기 -->
+    <include app:graph="@navigation/transfer_nav_graph"/>
+</navigation>

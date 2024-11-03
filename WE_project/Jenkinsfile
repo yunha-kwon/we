@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_IMAGE = 'kin4496/we-fe:latest'
+        DOCKER_REGISTRY_CREDENTIALS = 'dockerhub' // Docker 허브 자격증명 ID
+    }
+    stages {
+        
+        stage('Docker Build') {
+            steps {
+                dir('WE_project')
+                {
+                    script {
+                        docker.build(DOCKER_IMAGE, '-f Dockerfile .')
+                    }
+                }
+            }
+        }
+        stage('Docker Push') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: DOCKER_REGISTRY_CREDENTIALS, usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    script {
+                        sh "docker login -u $DOCKER_USER -p $DOCKER_PASS"
+                        sh "docker push ${DOCKER_IMAGE}"
+                    }
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    // 배포용 Docker Container 실행
+                    sh 'docker rm -f we-fe'
+                    sh 'docker run -d -p 5173:5173 --name we-fe ${DOCKER_IMAGE}'
+                }
+            }
+        }
+    }
+}
+

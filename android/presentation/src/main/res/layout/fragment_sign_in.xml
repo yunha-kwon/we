@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".sign.SignInFragment">
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="51dp"
+            android:background="@drawable/ic_app_logo"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+            android:layout_marginTop="52dp"
+            android:layout_height="0dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_sign_in_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:layout_constraintTop_toTopOf="parent"
+               >
+
+                <TextView
+                    android:id="@+id/tv_sign_in_email"
+                    style="@style/suite_regular_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/sign_email"
+                    android:textColor="@color/we_brown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_sign_in_email"
+                    style="@style/suite_regular_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_white_10_stroke_1_we_brown"
+                    android:hint="@string/sign_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingVertical="19dp"
+                    android:paddingStart="20dp"
+                    android:textColorHint="@color/we_brown"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_sign_in_email" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_sign_in_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/cl_sign_in_email">
+
+                <TextView
+                    android:id="@+id/tv_sign_in_password"
+                    style="@style/suite_regular_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/sign_password"
+                    android:textColor="@color/we_brown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_sign_in_password"
+                    style="@style/suite_regular_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_white_10_stroke_1_we_brown"
+                    android:hint="@string/sign_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:paddingVertical="19dp"
+                    android:paddingStart="20dp"
+                    android:textColorHint="@color/we_brown"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_sign_in_password" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_sign_up"
+                style="@style/suite_medium_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:elevation="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rectangle_we_light_pink_10"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:text="@string/sign_up"
+                android:textColor="@color/we_brown"
+                app:layout_constraintTop_toBottomOf="@+id/cl_sign_in_password"
+                app:layout_constraintEnd_toEndOf="@+id/cl_sign_in_password"
+                />
+
+            <TextView
+                android:id="@+id/tv_sign_in_login"
+                style="@style/suite_medium_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/rectangle_we_light_pink_10"
+                android:gravity="center"
+                android:elevation="5dp"
+                android:paddingVertical="11dp"
+                android:text="@string/sign_login"
+                android:textColor="@color/we_brown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

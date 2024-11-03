@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/schedule_register_nav_graph"
+    app:startDestination="@+id/scheduleRegisterFragment">
+
+    <fragment
+        android:id="@+id/scheduleRegisterFragment"
+        android:name="com.we.presentation.schedule.ScheduleRegisterFragment"
+        tools:layout="@layout/fragment_schedule_register">
+        <action
+            android:id="@+id/action_scheduleRegisterFragment_to_locationRegisterFragment"
+            app:destination="@id/locationRegisterFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right" />
+        <argument
+            android:name="scheduleUpdateParam"
+            android:defaultValue="@null"
+            app:argType="com.we.presentation.schedule.model.ScheduleUpdateParam"
+            app:nullable="true" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/locationRegisterFragment"
+        android:name="com.we.presentation.schedule.LocationRegisterFragment"
+        tools:layout="@layout/fragment_location_register" />
+</navigation>

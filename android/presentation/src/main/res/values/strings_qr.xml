@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="congratulatory_money_qr_code">축의금 QR 코드</string>
+    <string name="qr_code_title1">축의금을 받기 위한</string>
+    <string name="qr_code_title2">QR 코드를 생성해 보세요.</string>
+    <string name="share_qr_code">공유 하기</string>
+</resources>

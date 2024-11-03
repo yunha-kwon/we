@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+
+    <string name="schedule_register">스케줄 작성</string>
+    <string name="schedule_content">내용</string>
+    <string name="schedule_location">장소</string>
+    <string name="schedule_search_location">검색</string>
+    <string name="schedule_date">일시</string>
+    <string name="schedule_date_hint">일정을 선택해 주세요</string>
+    <string name="schedule_price">가격(선택사항)</string>
+    <string name="schedule_register_complete">작성완료</string>
+    <string name="schedule_location_register">주소등록</string>
+
+    <string name="schedule_year">%s년</string>
+    <string name="schedule_month">%s월</string>
+</resources>

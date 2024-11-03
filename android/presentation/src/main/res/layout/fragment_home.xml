@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".home.HomeFragment">
+
+            <TextView
+                android:id="@+id/tv_home_app_title"
+                style="@style/suite_extra_bold_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/home_app_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_home_user_name"
+                style="@style/suite_semibold_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="85dp"
+                android:text="@string/welcome"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="120dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <View
+                    android:id="@+id/iv_highlight"
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_home_remaining_days"
+                    app:layout_constraintStart_toStartOf="@+id/tv_home_remaining_days"
+                    android:background="@color/we_pink"/>
+
+                <TextView
+                    android:id="@+id/tv_home_remaining_days"
+                    style="@style/suite_extra_bold_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remaining_days"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_home_remain"
+                    style="@style/suite_bold_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/remain"
+                    app:layout_constraintStart_toEndOf="@+id/tv_home_remaining_days"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_home_banner"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="170dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                android:id="@+id/vp_home_total_banner_dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:dotsColor="@color/rosy_brown"
+                app:dotsCornerRadius="4dp"
+                app:dotsSize="8dp"
+                app:dotsSpacing="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vp_home_banner" />
+
+            <TextView
+                android:id="@+id/tv_accountInfo"
+                style="@style/suite_bold_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="315dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_home_account"
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_marginTop="360dp"
+                android:nestedScrollingEnabled="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                android:id="@+id/vp_home_total_account_dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:dotsColor="@color/rosy_brown"
+                app:dotsCornerRadius="4dp"
+                app:dotsSize="8dp"
+                app:dotsSpacing="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vp_home_account" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_home_btn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vp_home_total_account_dots_indicator">
+
+                <include
+                    android:id="@+id/ic_home_button"
+                    layout="@layout/include_home_button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="17dp"
+                    app:img="@{@drawable/recommended_menu}"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_invitation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:title="@{@string/meal_ticket}" />
+
+                <include
+                    android:id="@+id/ic_invitation"
+                    layout="@layout/include_home_button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="27dp"
+                    android:layout_marginVertical="10dp"
+                    app:img="@{@drawable/sms_tracking}"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_qr_code"
+                    app:layout_constraintStart_toEndOf="@+id/ic_home_button"
+                    app:title="@{@string/invitation}" />
+
+                <include
+                    android:id="@+id/ic_qr_code"
+                    layout="@layout/include_home_button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginEnd="17dp"
+                    app:img="@{@drawable/baseline_qr_code_24}"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ic_invitation"
+                    app:title="@{@string/guest_book}" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

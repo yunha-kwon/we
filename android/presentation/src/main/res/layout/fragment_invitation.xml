@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="shareVisible"
+            type="boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.InvitationFragment">
+
+        <include
+            android:id="@+id/ic_title"
+            layout="@layout/include_we_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@{@string/invitation}" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_invitation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="60dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            app:layout_constraintDimensionRatio="360:384"
+            app:layout_constraintTop_toBottomOf="@+id/ic_title" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_share"
+            style="@style/suite_medium_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/rectangle_we_light_pink_10"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:text="@string/invitation_share"
+            android:textColor="@color/we_brown"
+            android:visibility="@{shareVisible ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

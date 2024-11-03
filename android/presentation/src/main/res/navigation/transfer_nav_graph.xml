@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transfer_nav_graph"
+    app:startDestination="@+id/transferInfoRegisterFragment">
+
+    <fragment
+        android:id="@+id/transferInfoRegisterFragment"
+        android:name="com.we.presentation.transfer.TransferInfoRegisterFragment"
+        tools:layout="@layout/fragment_transfer_info_register">
+
+        <argument
+            android:name="accountNo"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_transferInfoRegisterFragment_to_transferEasyPasswordFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/transferEasyPasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/transferEasyPasswordFragment"
+        android:name="com.we.presentation.transfer.TransferEasyPasswordFragment"
+        tools:layout="@layout/fragment_transfer_easy_password" >
+        <action
+            android:id="@+id/action_transferEasyPasswordFragment_to_transferSuccessFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/transferSuccessFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/transferSuccessFragment"
+        android:name="com.we.presentation.transfer.TransferSuccessFragment"
+        tools:layout="@layout/fragment_transfer_success">
+        <argument
+            android:name="result"
+            app:argType="boolean"
+            />
+    </fragment>
+
+</navigation>

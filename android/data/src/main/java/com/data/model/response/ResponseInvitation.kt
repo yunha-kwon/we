@@ -1,0 +1,36 @@
+package com.data.model.response
+
+
+data class ResponseInvitation(
+    val address: String,
+    val addressDetail: String,
+    val brideBirthOrder: String,
+    val brideFatherFirstName: String,
+    val brideFatherLastName: String,
+    val brideFirstName: String,
+    val brideLastName: String,
+    val brideMotherFirstName: String,
+    val brideMotherLastName: String,
+    val coupleAccount: String,
+    val coupleAccountOwner: String,
+    val coupleBankName: String,
+    val coupleId: Int,
+    val date: String,
+    val greetings: String,
+    val groomBirthOrder: String,
+    val groomFatherFirstName: String,
+    val groomFatherLastName: String,
+    val groomFirstName: String,
+    val groomLastName: String,
+    val groomMotherFirstName: String,
+    val groomMotherLastName: String,
+    val hour: Int,
+    val invitationId: Int,
+    val latitude: Double,
+    val longitude: Double,
+    val minute: Int,
+    val timezone: String,
+    val title: String,
+    val url: String,
+    val weddingHall: String
+)

@@ -1,0 +1,4 @@
+/build
+
+# Environment variables
+.env

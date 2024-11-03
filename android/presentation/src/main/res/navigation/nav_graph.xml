@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/myPageFragment">
+
+    <fragment
+        android:id="@+id/guestFragment"
+        android:name="com.we.presentation.guest.GuestFragment"
+        tools:layout="@layout/fragment_guest">
+        <action
+            android:id="@+id/action_guestFragment_to_coupleFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/coupleFragment" />
+        <action
+            android:id="@+id/action_guestFragment_to_accountCheckFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/accountCheckFragment" />
+        <action
+            android:id="@+id/action_guestFragment_to_accountFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_guestFragment_to_transfer_nav_graph"
+
+            app:destination="@id/transfer_nav_graph" />
+        <action
+            android:id="@+id/action_guestFragment_to_remittance_gragh"
+            app:destination="@id/remittance_gragh" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.we.presentation.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_accountFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/accountFragment" />
+
+
+        <action
+            android:id="@+id/action_homeFragment_accountCheckFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/accountCheckFragment"/>
+        <action
+            android:id="@+id/action_fragment_home_to_remittanceFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/remittanceFragment">
+            <argument
+                android:name="account"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_homeFragment_to_invitationFragment"
+            app:destination="@id/invitationFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_guestBookFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/guestBookFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_coupleFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/coupleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_remittance_gragh"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/remittance_gragh" />
+        <action
+            android:id="@+id/action_homeFragment_to_mealTicketFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/mealTicketFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/myPageFragment"
+        android:name="com.we.presentation.mypage.MyPageFragment"
+        tools:layout="@layout/fragment_my_page" />
+
+    <!-- 스케줄 -->
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.we.presentation.schedule.ScheduleFragment"
+        tools:layout="@layout/fragment_schedule">
+        <action
+            android:id="@+id/action_scheduleFragment_to_schedule_register_nav_graph"
+            app:destination="@id/schedule_register_nav_graph"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.we.presentation.account.AccountFragment"
+        android:label="AccountFragment"
+        tools:layout="@layout/fragment_account">
+
+        <argument
+            android:name="inputType"
+            android:defaultValue="true"
+            app:argType="boolean" />
+
+        <argument
+            android:name="modalType"
+            android:defaultValue="true"
+            app:argType="boolean"/>
+
+        <action
+            android:id="@+id/action_accountFragment_to_accountTransferFragment"
+            app:destination="@id/accountTransferFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/accountFragment" />
+
+        <action
+            android:id="@+id/action_guest_accountFragment_to_accountTransferFragment"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/accountTransferFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/accountFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/accountTransferFragment"
+        android:name="com.we.presentation.account.AccountTransferFragment"
+        android:label="AccountTransferFragment"
+        tools:layout="@layout/fragment_account_transfer">
+        <action
+            android:id="@+id/action_accountTransferFragment_to_transfer_nav_graph"
+            app:enterAnim="@animator/anim_fade_in_x_right_to_left"
+            app:popEnterAnim="@animator/anim_fade_in_x_left_to_right"
+            app:destination="@id/transfer_nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountCheckFragment"
+        android:name="com.we.presentation.accountcheck.AccountCheckFragment"
+        android:label="AccountCheckFragment"
+        tools:layout="@layout/fragment_account_check">
+        <argument
+            android:name="account"
+            app:argType="string" />
+    </fragment>
+
+    <!-- 청첩장 -->
+    <fragment
+        android:id="@+id/invitationFragment"
+        android:name="com.we.presentation.home.InvitationFragment"
+        tools:layout="@layout/fragment_invitation" />
+    <fragment
+        android:id="@+id/guestBookFragment"
+        android:name="com.we.presentation.guestbook.GuestBookFragment"
+        android:label="GuestBookFragment"
+        tools:layout="@layout/fragment_guest_book" />
+    <fragment
+        android:id="@+id/coupleFragment"
+        android:name="com.we.presentation.couple.CoupleFragment"
+        android:label="CoupleFragment"
+        tools:layout="@layout/fragment_couple" />
+
+    <!-- 스케줄 등록 -->
+    <include app:graph="@navigation/schedule_register_nav_graph" />
+
+    <!-- 송금 하기  -->
+    <include app:graph="@navigation/remittance_gragh" />
+
+    <!-- 이체 하기 -->
+
+    <include app:graph="@navigation/transfer_nav_graph"/>
+    <fragment
+        android:id="@+id/mealTicketFragment"
+        android:name="com.we.presentation.mealTicket.MealTicketFragment"
+        android:label="MealTicketFragment" />
+
+
+</navigation>

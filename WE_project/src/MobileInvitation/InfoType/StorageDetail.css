@@ -1,0 +1,59 @@
+.react-calendar .highlight {
+  background-color: #a88e97;
+  color: white;
+  border-radius: 0%;
+}
+
+.react-calendar {
+  background: transparent !important;
+  border: none !important;
+}
+
+.react-calendar .react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+}
+
+.detailcalendar .react-calendar__navigation {
+  display: none;
+}
+
+.detailcalendar .react-calendar__tile--now {
+  background-color: transparent;
+}
+
+.detailcalendar {
+  pointer-events: none;
+}
+
+.my-popup-class {
+  max-width: 500px;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.pointer-none {
+  pointer-events: none;
+}
+.pointer-auto {
+  pointer-events: auto;
+}
+.slide-up {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.slide-up-enter {
+  transform: translateY(0);
+  opacity: 1;
+}

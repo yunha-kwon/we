@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".transfer.TransferAccountTypeActivity">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/suite_extra_bold_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계정이 있으신가요?"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_yes"
+            style="@style/suite_semibold_16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rectangle_we_light_pink_10"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:text="예"
+            android:textColor="@color/we_brown"
+            app:layout_constraintEnd_toStartOf="@+id/tv_no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_no"
+            style="@style/suite_semibold_16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rectangle_we_light_pink_10"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:text="아니오"
+            android:textColor="@color/we_brown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_yes"
+            app:layout_constraintTop_toTopOf="@+id/tv_yes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

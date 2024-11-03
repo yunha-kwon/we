@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".mypage.MyPageFragment">
+
+        <TextView
+            android:id="@+id/ic_title"
+            style="@style/suite_extra_bold_20"
+            layout="@layout/include_we_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/my_page"
+            android:textColor="@color/we_brown"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="23dp"
+            android:background="@color/bronze"
+            app:layout_constraintTop_toBottomOf="@+id/ic_title" />
+
+        <TextView
+            android:id="@+id/tv_my_account"
+            style="@style/suite_medium_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/my_account"
+            android:textColor="@color/bronze"
+            app:layout_constraintTop_toBottomOf="@+id/view_line" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_my_account"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_my_account" />
+
+        <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+            android:id="@+id/vp_total_account_dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:dotsColor="@color/rosy_brown"
+            app:dotsCornerRadius="4dp"
+            app:dotsSize="8dp"
+            app:dotsSpacing="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vp_my_account" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            style="@style/suite_medium_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/logout"
+            android:textColor="@color/bronze"
+            app:layout_constraintTop_toBottomOf="@+id/vp_total_account_dots_indicator" />
+
+        <TextView
+            android:id="@+id/tv_sign_out"
+            style="@style/suite_medium_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/sign_out"
+            android:textColor="@color/bronze"
+            app:layout_constraintTop_toBottomOf="@+id/tv_logout" />
+
+        <TextView
+            android:id="@+id/tv_notification"
+            style="@style/suite_medium_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/notification"
+            android:textColor="@color/bronze"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sign_out" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sc_notification_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_notification"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_notification"
+            app:thumbTint="@color/white"
+            app:trackTint="@color/bronze" />
+
+        <TextView
+            android:id="@+id/tv_app_version"
+            style="@style/suite_medium_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/app_version"
+            android:textColor="@color/bronze"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_notification" />
+
+        <TextView
+            android:id="@+id/tv_app_version_value"
+            style="@style/suite_medium_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/app_version_value"
+            android:textColor="@color/bronze"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_app_version"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_app_version" />
+
+        <TextView
+            android:id="@+id/tv_inquiry"
+            style="@style/suite_medium_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/inquiry"
+            android:textColor="@color/bronze"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_app_version" />
+
+        <TextView
+            android:id="@+id/tv_service"
+            style="@style/suite_medium_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/service"
+            android:textColor="@color/bronze"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_inquiry" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

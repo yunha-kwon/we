@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_logo">[ WE : ]</string>
+    <string name="sign_up">회원가입</string>
+    <string name="sign_email">이메일</string>
+    <string name="sign_password">비밀번호</string>
+    <string name="sign_nickname">닉네임</string>
+    <string name="sign_login">로그인</string>
+    <string name="sign_email_annotation">\@</string>
+    <string name="sign_easy_password_complete">확인</string>
+    <string name="sign_easy_password_delete">지움</string>
+    <string name="sign_cancel">취소</string>
+    <string name="sign_register_easy_password">[we:] 에서 사용할 \n간편 비밀번호를 설정하세요</string>
+    <string name="sign_register_easy_password_check">동일한 비밀번호를\n한번 더 입력하세요</string>
+    <string name="sign_up_success">예비 잉꼬님, \n[we:] 가입을 환영합니다!</string>
+    <string name="sign_up_start">시작하기</string>
+</resources>

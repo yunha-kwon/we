@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".remittance.RemittanceCheckFragment">
+
+        <ImageView
+            android:id="@+id/iv_remittance_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/suite_regular_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="@string/remittance"
+            app:layout_constraintStart_toEndOf="@+id/iv_remittance_back"
+            app:layout_constraintTop_toTopOf="@+id/iv_remittance_back" />
+
+        <TextView
+            android:id="@+id/tv_remittance_send_account"
+            style="@style/suite_semibold_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="ooo 계좌로"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_remittance_back" />
+
+        <TextView
+            android:id="@+id/tv_remittance_send_money"
+            style="@style/suite_bold_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000원"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_remittance_send_account" />
+
+
+        <TextView
+            android:id="@+id/tv_remittance_check"
+            style="@style/suite_medium_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/rectangle_we_light_pink_10"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:paddingVertical="11dp"
+            android:text="보내기"
+            android:textColor="@color/we_brown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

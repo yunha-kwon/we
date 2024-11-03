@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/remittance_gragh"
+    app:startDestination="@id/remittanceFragment">
+    <argument
+        android:name="account"
+        app:argType="string" />
+    <fragment
+        android:id="@+id/remittanceFragment"
+        android:name="com.we.presentation.remittance.RemittanceFragment"
+        android:label="RemittanceFragment"
+        tools:layout="@layout/fragment_remittance"
+        >
+        <action
+            android:id="@+id/action_remittanceFragment_to_remittanceCheckFragment"
+            app:destination="@id/remittanceCheckFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/easyPasswordRegisterFragment"
+        android:name="com.we.presentation.sign.EasyPasswordRegisterFragment"
+        android:label="EasyPasswordRegisterFragment"
+        tools:layout="@layout/fragment_easy_password_register"
+        >
+        <argument
+            android:name="easyPasswordType"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_easyPasswordRegisterFragment_to_remittanceFinishFragment"
+            app:destination="@id/remittanceFinishFragment"
+            app:popUpTo="@id/remittanceFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/remittanceCheckFragment"
+        android:name="com.we.presentation.remittance.RemittanceCheckFragment"
+        android:label="RemittanceCheckFragment"
+        tools:layout="@layout/fragment_remittance_check"
+        >
+        <action
+            android:id="@+id/action_remittanceCheckFragment_to_easyPasswordRegisterFragment"
+            app:destination="@id/easyPasswordRegisterFragment">
+            <argument
+                android:name="easyPasswordType"
+                app:argType="boolean" />
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/remittanceFinishFragment"
+        android:name="com.we.presentation.remittance.RemittanceFinishFragment"
+        android:label="RemittanceFinishFragment"
+        tools:layout="@layout/fragment_remittance_finish">
+        <argument
+            android:name="remittanceCheck"
+            app:argType="boolean" />
+    </fragment>
+</navigation>
